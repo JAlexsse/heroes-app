@@ -1,0 +1,24 @@
+
+
+<mat-card-header>
+    <mat-card-title>
+        Are you sure?
+    </mat-card-title>
+</mat-card-header>
+<mat-card-content>
+    <p>You are about to delete {{ data.superhero }}.</p>
+    <br>
+    <div fxLayout="row" fxLayoutGap="1vh">
+        <button mat-raised-button 
+            fxFlex="50"
+            (click)="confirmDeletion()">
+            Yes
+        </button>
+        <button mat-raised-button 
+            fxFlex="50" 
+            color="primary"
+            (click)="closeDialog()">
+            No
+        </button>
+    </div>
+</mat-card-content>

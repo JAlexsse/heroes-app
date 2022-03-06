@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container {
+    margin: 2vh;
+}
+
+.heroe_card {
+    margin: 1vh;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.heroe_button {
+    margin: 0.5vh;
+}
+
+.heroe_img {
+    width: 100%;
+    border-radius: 2vh;
+}

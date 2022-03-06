@@ -1,0 +1,45 @@
+<mat-grid-list cols="1"  *ngIf="!heroe; else heroe_card">
+    <mat-grid-tile>
+        <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<ng-template #heroe_card>
+
+    <div fxLayout="row"
+        fxLayout.xs="column"
+        fxLayoutGap="2vh">
+        <div fxFlex="50">
+            <h1>{{ heroe.superhero }} <small>{{ heroe.alter_ego }}</small></h1>
+            <mat-divider></mat-divider>
+            <br>
+            <img [src]="heroe | heroeImage" class="heroe_img">
+        </div>
+        <div fxFlex="50">
+            <h1>Profile</h1>
+            <mat-divider></mat-divider>
+            <br>
+            <mat-list>
+                <mat-list-item>
+                    Publisher: {{ heroe.publisher }}
+                </mat-list-item>
+                <mat-list-item>
+                    First appearance: {{ heroe.first_appearance }}
+                </mat-list-item>
+                <mat-list-item>
+                    Characters: {{ heroe.characters }}
+                </mat-list-item>
+                <mat-list-item>
+                    <button mat-raised-button 
+                        color="primary"
+                        (click)="backToList()">
+                        Back
+                    </button>
+                </mat-list-item>
+            </mat-list>
+            
+        </div>
+    </div>
+
+</ng-template>
+
